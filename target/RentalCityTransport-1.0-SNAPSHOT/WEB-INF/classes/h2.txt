@@ -1,0 +1,55 @@
+CREATE TABLE IF NOT EXISTS user_role (name VARCHAR(30) PRIMARY KEY NOT NULL);
+INSERT  INTO user_role (name) VALUES('user'), ('admin');
+
+CREATE TABLE IF NOT EXISTS parking_type (name VARCHAR(30) PRIMARY KEY NOT NULL);
+INSERT  INTO parking_type (name) VALUES('all'), ('bike'), ('scooter'), ('electro scooter');
+
+CREATE TABLE IF NOT EXISTS vehicle_type(type VARCHAR(30) PRIMARY KEY NOT NULL);
+INSERT INTO vehicle_type (type) VALUES ('bike'), ('scooter'), ('electro scooter');
+
+CREATE TABLE IF NOT EXISTS vehicle_condition(condition VARCHAR(30) PRIMARY KEY NOT NULL);
+INSERT INTO vehicle_condition (condition) VALUES ('excellent'), ('good'), ('satisfactory');
+
+
+CREATE TABLE IF NOT EXISTS user (
+id SERIAL PRIMARY KEY NOT NULL, 
+first_name VARCHAR(128) NOT NULL, 
+last_name VARCHAR(128) NOT NULL, 
+email VARCHAR(128) NOT NULL UNIQUE,
+password VARCHAR(128) NOT NULL UNIQUE,
+role VARCHAR(128) NOT NULL,
+cahs DECIMAL NOT NULL );
+
+ALTER TABLE user ADD FOREIGN KEY (role) REFERENCES USER_ROLE(name);
+
+ALTER TABLE user ALTER COLUMN cahs RENAME TO cash;
+
+CREATE TABLE IF NOT EXISTS parking (
+id SERIAL PRIMARY KEY NOT NULL, 
+coord_x DECIMAL NOT NULL,
+coord_y DECIMAL NOT NULL,
+radius INT NOT NULL,
+parking_type VARCHAR(128) NOT NULL,
+address VARCHAR(128) NOT NULL,
+FOREIGN KEY (parking_type) REFERENCES parking_type(name));
+
+CREATE TABLE IF NOT EXISTS vehicle  (
+id SERIAL PRIMARY KEY NOT NULL, 
+type VARCHAR(128) NOT NULL,
+condition VARCHAR(128) NOT NULL,
+parking_id INT NOT NULL,
+speed_max INT NOT NULL,
+charge INT,
+is_electric BOOLEAN NOT NULL,
+FOREIGN KEY (type) REFERENCES vehicle_type(type), 
+FOREIGN KEY (condition) REFERENCES vehicle_condition(condition),
+FOREIGN KEY (parking_id) REFERENCES parking(id));
+data_end DATETIME,
+parking_start_id INT NOT NULL,
+parking_end_id INT,
+is_closed BOOLEAN NOT NULL,
+vehicle_id INT NOT NULL,
+FOREIGN KEY (user_id) REFERENCES user(id), 
+FOREIGN KEY (parking_start_id) REFERENCES parking(id),
+FOREIGN KEY (parking_end_id) REFERENCES parking(id),
+FOREIGN KEY (vehicle_id) REFERENCES vehicle(id));
