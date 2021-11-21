@@ -1,0 +1,722 @@
+21-11-11 20:44:17 database: wrong user or password; user: "FIJEZ"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 21 more
+2021-11-12 22:07:00 database: wrong user or password; user: "FIJEZ"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 21 more
+2021-11-12 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Поле "USER_ID" не должно поддерживать значение NULL
+Column "USER_ID" must not be nullable; SQL statement:
+ALTER TABLE users ADD PRIMARY KEY(user_id) [90023-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:334)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:151)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 00:25:06 database: wrong user or password; user: "FIJEZ"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 21 more
+2021-11-13 00:25:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP USER_TYPE[*]"; ожидалось "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"
+Syntax error in SQL statement "DROP USER_TYPE[*]"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP user_type [42001-200]
+2021-11-13 01:09:57 jdbc[4]: null
+org.h2.message.DbException: Незакрытое приложением соединение уничтожено сборщиком мусора
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Незакрытое приложением соединение уничтожено сборщиком мусора
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2021-11-13 01:11:19 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXIST[*] USER_ROLE (NAME VARCHAR(128) PRIMARY KEY AUTO_INCREMENT)"; ожидалось "EXISTS"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXIST[*] USER_ROLE (NAME VARCHAR(128) PRIMARY KEY AUTO_INCREMENT)"; expected "EXISTS"; SQL statement:
+CREATE TABLE IF NOT EXIST user_role (name VARCHAR(128) PRIMARY KEY AUTO_INCREMENT) [42001-200]
+2021-11-13 01:14:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "USER" не найден
+Column "USER" not found; SQL statement:
+INSERT INTO user_role(user) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 01:14:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "ADMIN" не найден
+Column "ADMIN" not found; SQL statement:
+INSERT INTO user_role(admin) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 01:14:37 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USER_ROLE('user'[*])"; ожидалось "identifier"
+Syntax error in SQL statement "INSERT INTO USER_ROLE('user'[*])"; expected "identifier"; SQL statement:
+INSERT INTO user_role('user') [42001-200]
+2021-11-13 01:14:37 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USER_ROLE('admin'[*])"; ожидалось "identifier"
+Syntax error in SQL statement "INSERT INTO USER_ROLE('admin'[*])"; expected "identifier"; SQL statement:
+INSERT INTO user_role('admin') [42001-200]
+2021-11-13 01:15:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "user"
+Data conversion error converting "user"; SQL statement:
+INSERT INTO user_role VALUES('user') [22018-200]
+2021-11-13 01:15:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role  VALUES('admin') [22018-200]
+2021-11-13 01:15:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "user" не найден
+Column "user" not found; SQL statement:
+INSERT INTO user_role VALUES("user") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 01:15:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role  VALUES('admin') [22018-200]
+2021-11-13 01:16:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "user"
+Data conversion error converting "user"; SQL statement:
+INSERT INTO user_role VALUES('user') [22018-200]
+2021-11-13 01:16:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role  VALUES('admin') [22018-200]
+2021-11-13 01:17:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USER_ROLE NAME[*] VALUES('user')"; ожидалось "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO USER_ROLE NAME[*] VALUES('user')"; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+INSERT INTO user_role name VALUES('user') [42001-200]
+2021-11-13 01:17:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USER_ROLE NAME[*] VALUES('admin')"; ожидалось "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO USER_ROLE NAME[*] VALUES('admin')"; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+INSERT INTO user_role name VALUES('admin') [42001-200]
+2021-11-13 01:18:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USER_ROLE [[*]NAME] VALUES('user')"; ожидалось "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO USER_ROLE [[*]NAME] VALUES('user')"; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+INSERT INTO user_role [name] VALUES('user') [42001-200]
+2021-11-13 01:18:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USER_ROLE [[*]NAME] VALUES('admin')"; ожидалось "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO USER_ROLE [[*]NAME] VALUES('admin')"; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+INSERT INTO user_role [name] VALUES('admin') [42001-200]
+2021-11-13 01:18:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "user"
+Data conversion error converting "user"; SQL statement:
+INSERT INTO user_role (name) VALUES('user') [22018-200]
+2021-11-13 01:18:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role (name) VALUES('admin') [22018-200]
+2021-11-13 01:19:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "USER" не найден
+Column "USER" not found; SQL statement:
+INSERT INTO user_role (name) VALUES(user) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 01:19:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role (name) VALUES('admin') [22018-200]
+2021-11-13 01:20:07 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "user"
+Data conversion error converting "user"; SQL statement:
+INSERT INTO user_role (name) VALUES('user') [22018-200]
+2021-11-13 01:20:07 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role (name) VALUES('admin') [22018-200]
+2021-11-13 01:20:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "user"
+Data conversion error converting "user"; SQL statement:
+INSERT INTO user_role (name) VALUES('user') [22018-200]
+2021-11-13 01:20:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role (name) VALUES('admin') [22018-200]
+2021-11-13 01:21:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "user"
+Data conversion error converting "user"; SQL statement:
+INSERT INTO user_role (name) VALUES('user') [22018-200]
+2021-11-13 01:21:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "admin"
+Data conversion error converting "admin"; SQL statement:
+INSERT INTO user_role (name) VALUES('admin') [22018-200]
+2021-11-13 01:27:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * USER_ROLE[*]"
+Syntax error in SQL statement "SELECT * USER_ROLE[*]"; SQL statement:
+SELECT * user_role [42000-200]
+2021-11-13 01:27:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * INTO[*] USER_ROLE"
+Syntax error in SQL statement "SELECT * INTO[*] USER_ROLE"; SQL statement:
+SELECT * INTO user_role [42000-200]
+2021-11-13 01:28:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * INTO[*] USER_ROLE"
+Syntax error in SQL statement "SELECT * INTO[*] USER_ROLE"; SQL statement:
+SELECT * INTO user_role [42000-200]
+2021-11-13 01:36:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "TYPE" не найден
+Column "TYPE" not found; SQL statement:
+INSERT INTO parking_type (type) VALUES ('bike'), ('scooter'), ('electro scooter') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 01:39:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM[*]"; ожидалось "identifier"
+Syntax error in SQL statement "SELECT * FROM[*]"; expected "identifier"; SQL statement:
+SELECT * FROM [42001-200]
+2021-11-13 15:43:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXIST[*] USER (
+ID SERIALE PRIMARY KYE NOT NULL, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL, 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; ожидалось "EXISTS"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXIST[*] USER (
+ID SERIALE PRIMARY KYE NOT NULL, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL, 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; expected "EXISTS"; SQL statement:
+CREATE TABLE IF NOT EXIST user (
+id SERIALE PRIMARY KYE NOT NULL, 
+first_name VARCHAR(128) NOT NULL, 
+last_name VARCHAR(128) NOT NUILL, 
+email VARCHAR(128) NOT NULL UNIQUE,
+password VARCHAR(128) NOT NULL UNIQUE,
+role VARCHAR(128) NOT NULL,
+cahs DECIMAL NOT NULL ) [42001-200]
+2021-11-13 15:43:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER" не найдена
+Table "USER" not found; SQL statement:
+SELECT * FROM user [42102-200]
+2021-11-13 15:43:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Неизвестный тип данных: "SERIALE"
+Unknown data type: "SERIALE"; SQL statement:
+CREATE TABLE IF NOT EXISTs user (
+id SERIALE PRIMARY KYE NOT NULL, 
+first_name VARCHAR(128) NOT NULL, 
+last_name VARCHAR(128) NOT NUILL, 
+email VARCHAR(128) NOT NULL UNIQUE,
+password VARCHAR(128) NOT NULL UNIQUE,
+role VARCHAR(128) NOT NULL,
+cahs DECIMAL NOT NULL ) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 15:43:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER" не найдена
+Table "USER" not found; SQL statement:
+SELECT * FROM user [42102-200]
+2021-11-13 15:43:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS USER (
+ID SERIAL PRIMARY KYE[*] NOT NULL, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL, 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; ожидалось "KEY"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS USER (
+ID SERIAL PRIMARY KYE[*] NOT NULL, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL, 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; expected "KEY"; SQL statement:
+CREATE TABLE IF NOT EXISTS user (
+id SERIAL PRIMARY KYE NOT NULL, 
+first_name VARCHAR(128) NOT NULL, 
+last_name VARCHAR(128) NOT NUILL, 
+email VARCHAR(128) NOT NULL UNIQUE,
+password VARCHAR(128) NOT NULL UNIQUE,
+role VARCHAR(128) NOT NULL,
+cahs DECIMAL NOT NULL ) [42001-200]
+2021-11-13 15:43:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER" не найдена
+Table "USER" not found; SQL statement:
+SELECT * FROM user [42102-200]
+2021-11-13 15:44:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS USER (
+ID SERIAL PRIMARY KEY NOT NULL, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL[*], 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; ожидалось "NULL"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS USER (
+ID SERIAL PRIMARY KEY NOT NULL, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL[*], 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; expected "NULL"; SQL statement:
+CREATE TABLE IF NOT EXISTS user (
+id SERIAL PRIMARY KEY NOT NULL, 
+first_name VARCHAR(128) NOT NULL, 
+last_name VARCHAR(128) NOT NUILL, 
+email VARCHAR(128) NOT NULL UNIQUE,
+password VARCHAR(128) NOT NULL UNIQUE,
+role VARCHAR(128) NOT NULL,
+cahs DECIMAL NOT NULL ) [42001-200]
+2021-11-13 15:44:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER" не найдена
+Table "USER" not found; SQL statement:
+SELECT * FROM user [42102-200]
+2021-11-13 15:44:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS USER (
+ID SERIAL  NOT NULL PRIMARY KEY, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL[*], 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; ожидалось "NULL"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS USER (
+ID SERIAL  NOT NULL PRIMARY KEY, 
+FIRST_NAME VARCHAR(128) NOT NULL, 
+LAST_NAME VARCHAR(128) NOT NUILL[*], 
+EMAIL VARCHAR(128) NOT NULL UNIQUE,
+PASSWORD VARCHAR(128) NOT NULL UNIQUE,
+ROLE VARCHAR(128) NOT NULL,
+CAHS DECIMAL NOT NULL )"; expected "NULL"; SQL statement:
+CREATE TABLE IF NOT EXISTS user (
+id SERIAL  NOT NULL PRIMARY KEY, 
+first_name VARCHAR(128) NOT NULL, 
+last_name VARCHAR(128) NOT NUILL, 
+email VARCHAR(128) NOT NULL UNIQUE,
+password VARCHAR(128) NOT NULL UNIQUE,
+role VARCHAR(128) NOT NULL,
+cahs DECIMAL NOT NULL ) [42001-200]
+2021-11-13 15:44:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER" не найдена
+Table "USER" not found; SQL statement:
+SELECT * FROM user [42102-200]
+2021-11-13 16:00:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "CAHS" не найден
+Column "CAHS" not found; SQL statement:
+ALTER TABLE user ALTER COLUMN cahs RENAME TO cash [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:719)
+	at org.h2.command.Parser.columnIfTableExists(Parser.java:8052)
+	at org.h2.command.Parser.parseAlterTableAlter(Parser.java:7712)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:7698)
+	at org.h2.command.Parser.parseAlter(Parser.java:6983)
+	at org.h2.command.Parser.parsePrepared(Parser.java:887)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 16:12:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Неизвестный тип данных: 
+Unknown data type: ; SQL statement:
+CREATE TABLE IF NOT EXISTS vehicle  (
+id SERIAL PRIMARY KEY NOT NULL, 
+type VARCHAR(128) NOT NULL,
+condition VARCHAR(128) NOT NULL,
+parking_id INT NOT NULL,
+speed_max INT NOT NULL,
+charge INT,
+is_electric BOOLEAN NOT NULL,
+FOREIGN KEY (type, condition, parking_id) REFERENCES vehicle_type(type), vehicle_condition(condition), parking(id)) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 16:12:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "VEHICLE" не найдена
+Table "VEHICLE" not found; SQL statement:
+SELECT * FROM vehicle [42102-200]
+2021-11-13 22:45:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Неизвестный тип данных: "DATATIME"
+Unknown data type: "DATATIME"; SQL statement:
+CREATE TABLE IF NOT EXISTS rent (
+id SERIAL PRIMARY KEY NOT NULL, 
+user_id INT NOT NULL,
+data_start DATATIME NOT NULL,
+data_end DATATIME,
+parking_start_id INT NOT NULL,
+parking_end_id INT,
+is_closed BOOLEAN NOT NULL,
+FOREIGN KEY (user_id) REFERENCES user(id), 
+FOREIGN KEY (parking_start_id) REFERENCES parking(id),
+FOREIGN KEY (parking_end_id) REFERENCES parking(id),
+FOREIGN KEY (vehicle_id) REFERENCES vehicle(id)) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 22:46:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "VEHICLE_ID" не найден
+Column "VEHICLE_ID" not found; SQL statement:
+CREATE TABLE IF NOT EXISTS rent (
+id SERIAL PRIMARY KEY NOT NULL, 
+user_id INT NOT NULL,
+data_start DATETIME NOT NULL,
+data_end DATETIME,
+parking_start_id INT NOT NULL,
+parking_end_id INT,
+is_closed BOOLEAN NOT NULL,
+FOREIGN KEY (user_id) REFERENCES user(id), 
+FOREIGN KEY (parking_start_id) REFERENCES parking(id),
+FOREIGN KEY (parking_end_id) REFERENCES parking(id),
+FOREIGN KEY (vehicle_id) REFERENCES vehicle(id)) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-11-13 22:53:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] GUEST"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] GUEST"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER guest PASWORD guest [42001-200]
+2021-11-13 22:53:49 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] GUEST"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] GUEST"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER guest PASWORD guest [42001-200]
+2021-11-13 22:54:11 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest'"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest'"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER guest PASWORD 'guest' [42001-200]
+2021-11-13 22:54:19 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER 'guest'[*] PASWORD 'guest'"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE USER 'guest'[*] PASWORD 'guest'"; expected "identifier"; SQL statement:
+CREATE USER 'guest' PASWORD 'guest' [42001-200]
+2021-11-13 22:54:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest'"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest'"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER guest PASWORD 'guest' [42001-200]
+2021-11-13 22:58:11 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest'"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest'"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER GUEST PASWORD 'guest' [42001-200]
+2021-11-13 22:58:35 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest'"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest'"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER GUEST PASWORD 'guest' [42001-200]
+2021-11-13 22:58:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest'"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest'"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER GUEST PASWORD 'guest' [42001-200]
+2021-11-13 22:59:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST[*]"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST[*]"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER GUEST [42001-200]
+2021-11-13 23:02:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest'"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest'"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER GUEST PASWORD 'guest' [42001-200]
+2021-11-13 23:02:33 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest' ADMIN"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest' ADMIN"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER GUEST PASWORD 'guest' ADMIN [42001-200]
+2021-11-13 23:03:29 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE USER GUEST PASWORD[*] 'guest'"; ожидалось "COMMENT, PASSWORD, SALT, IDENTIFIED"
+Syntax error in SQL statement "CREATE USER GUEST PASWORD[*] 'guest'"; expected "COMMENT, PASSWORD, SALT, IDENTIFIED"; SQL statement:
+CREATE USER GUEST PASWORD 'guest' [42001-200]
