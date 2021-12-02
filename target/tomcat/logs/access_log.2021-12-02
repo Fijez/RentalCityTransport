@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [02/Dec/2021:19:58:37 +0300] "POST /RentalCityTransport/login HTTP/1.1" 302 - http-bio-8080-exec-1 150
+0:0:0:0:0:0:0:1 - - [02/Dec/2021:19:58:38 +0300] "GET /RentalCityTransport/login.jsp HTTP/1.1" 200 492 http-bio-8080-exec-3 874
