@@ -53,11 +53,8 @@ public class DBoperations {
             PreparedStatement preparedStatement =
                     connection.prepareStatement(READ_USER_QUERY);
             preparedStatement.setString(1,userLogin);
-
             ResultSet resultSet = preparedStatement.executeQuery();
-
             while(resultSet.next()) {
-                System.out.println(resultSet.getString("email"));
                 //избавиться от if
                 if (resultSet.getString("role").equals("admin")) {
                     User user = new Admin(
@@ -67,6 +64,7 @@ public class DBoperations {
                             resultSet.getString("last_name"),
                             resultSet.getDouble("cash"));
                     user.setId(resultSet.getInt("id"));
+                    preparedStatement.close();
                     return user;
                 } else
                     if (resultSet.getString("role").equals("user")) {
@@ -77,6 +75,7 @@ public class DBoperations {
                                 resultSet.getString("last_name"),
                                 resultSet.getDouble("cash"));
                         user.setId(resultSet.getInt("id"));
+                        preparedStatement.close();
                         return user;
                     }
            }

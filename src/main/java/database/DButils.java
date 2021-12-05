@@ -13,7 +13,6 @@ public class DButils {
            // "\\src\\main\\resources\\CityRentalSystem";
 
     public static Connection connectionToDB() throws SQLException {
-            System.out.println(URL);
         DriverManager.registerDriver(new org.h2.Driver());
             return DriverManager.getConnection(URL, USER, PASSWORD);
     }
