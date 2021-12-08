@@ -66,4 +66,16 @@ public class UserDto {
     public void setTransport(Class<? extends VehicleEntity> transport) {
         this.transport = transport;
     }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "login='" + login + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", access=" + access +
+                ", cash=" + cash +
+                ", transport=" + transport +
+                '}';
+    }
 }

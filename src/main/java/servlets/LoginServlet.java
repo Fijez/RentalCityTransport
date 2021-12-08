@@ -1,6 +1,6 @@
 package servlets;
 
-import access.UserDao;
+import com.accenture.davydenko.access.UserDao;
 import model.entity.UserEntity;
 
 import javax.servlet.ServletContext;

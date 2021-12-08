@@ -24,7 +24,7 @@ ALTER TABLE user ADD FOREIGN KEY (role) REFERENCES USER_ROLE(name);
 
 ALTER TABLE user ALTER COLUMN cahs RENAME TO cash;
 
-CREATE TABLE IF NOT EXISTS parking (
+CREATE TABLE IF NOT EXISTS model.entity.parking (
 id SERIAL PRIMARY KEY NOT NULL, 
 coord_x DECIMAL NOT NULL,
 coord_y DECIMAL NOT NULL,
@@ -43,13 +43,13 @@ charge INT,
 is_electric BOOLEAN NOT NULL,
 FOREIGN KEY (type) REFERENCES vehicle_type(type), 
 FOREIGN KEY (condition) REFERENCES vehicle_condition(condition),
-FOREIGN KEY (parking_id) REFERENCES parking(id));
+FOREIGN KEY (parking_id) REFERENCES model.entity.parking(id));
 data_end DATETIME,
 parking_start_id INT NOT NULL,
 parking_end_id INT,
 is_closed BOOLEAN NOT NULL,
 vehicle_id INT NOT NULL,
 FOREIGN KEY (user_id) REFERENCES user(id), 
-FOREIGN KEY (parking_start_id) REFERENCES parking(id),
-FOREIGN KEY (parking_end_id) REFERENCES parking(id),
+FOREIGN KEY (parking_start_id) REFERENCES model.entity.parking(id),
+FOREIGN KEY (parking_end_id) REFERENCES model.entity.parking(id),
 FOREIGN KEY (vehicle_id) REFERENCES vehicle(id));
