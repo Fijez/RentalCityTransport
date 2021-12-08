@@ -1,1 +1,5 @@
-0:0:0:0:0:0:0:1 - - [08/Dec/2021:21:15:39 +0300] "POST /RentalCityTransport/login HTTP/1.1" 200 579 http-bio-8080-exec-1 954
+0:0:0:0:0:0:0:1 - - [08/Dec/2021:21:18:49 +0300] "GET /RentalCityTransport HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [08/Dec/2021:21:18:49 +0300] "GET /RentalCityTransport/ HTTP/1.1" 200 452 http-bio-8080-exec-3 633
+0:0:0:0:0:0:0:1 - - [08/Dec/2021:21:18:55 +0300] "POST /RentalCityTransport/login HTTP/1.1" 200 579 http-bio-8080-exec-4 329
+0:0:0:0:0:0:0:1 - - [08/Dec/2021:21:18:59 +0300] "POST /RentalCityTransport/testServlet HTTP/1.1" 302 - http-bio-8080-exec-5 2
+0:0:0:0:0:0:0:1 - - [08/Dec/2021:21:18:59 +0300] "GET /RentalCityTransport/withFilter/ForTestServlet.jsp HTTP/1.1" 200 137 http-bio-8080-exec-6 84

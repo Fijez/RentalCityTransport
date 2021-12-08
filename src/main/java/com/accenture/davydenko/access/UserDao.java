@@ -1,7 +1,7 @@
 package com.accenture.davydenko.access;
 
 import com.accenture.davydenko.access.DBconnection.DBconnection;
-import model.entity.UserEntity;
+import com.accenture.davydenko.model.entity.UserEntity;
 
 import java.sql.*;
 import java.util.ArrayList;
