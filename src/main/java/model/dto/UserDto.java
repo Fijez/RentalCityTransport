@@ -1,33 +1,22 @@
-package model.entity;
-public class UserEntity {
+package model.dto;
 
-    private int id;
+import model.entity.Access;
+import model.entity.VehicleEntity;
+
+public class UserDto {
     private String login;//e-mail
-    private String password;
     private String first_name;
     private String last_name;
     private Access access;
     private double cash;
     Class<? extends VehicleEntity> transport;
 
-    public UserEntity(int id, String login, String password,
-                      String first_name, String last_name, double cash) {
-        this.id = id;
+    public UserDto(String login, String first_name,
+                   String last_name, Access access) {
         this.login = login;
-        this.password = password;
         this.first_name = first_name;
         this.last_name = last_name;
-        this.access = Access.TENANT;
-        this.cash = cash;
-        transport = null;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.access = access;
     }
 
     public String getLogin() {
@@ -36,14 +25,6 @@ public class UserEntity {
 
     public void setLogin(String login) {
         this.login = login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getFirst_name() {
@@ -84,19 +65,5 @@ public class UserEntity {
 
     public void setTransport(Class<? extends VehicleEntity> transport) {
         this.transport = transport;
-    }
-
-    @Override
-    public String toString() {
-        return "UserEntity{" +
-                "id=" + id +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", access=" + access +
-                ", cash=" + cash +
-                ", transport=" + transport +
-                '}';
     }
 }

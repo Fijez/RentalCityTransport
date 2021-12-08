@@ -1,6 +1,6 @@
 package servlets;
 
-import access.UserDao.DBoperations;
+import access.UserDao;
 import model.entity.UserEntity;
 
 import javax.servlet.ServletContext;
@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         ServletContext servletContext = getServletContext();
         System.out.println("in loginServlet doPost");
         try {
-            UserEntity user = DBoperations.selectUser(login);
+            UserEntity user = UserDao.selectUser(login);
             HttpSession session = req.getSession(true);
             session.setAttribute("user",user);
             if (user != null && user.getPassword().equals(password)) {

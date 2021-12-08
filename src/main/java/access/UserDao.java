@@ -1,15 +1,14 @@
-package access.UserDao;
+package access;
 
 import access.DBconnection.DBconnection;
-import model.entity.AdminEntity;
-import model.entity.TenantEntity;
+import model.entity.Access;
 import model.entity.UserEntity;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBoperations {
+public class UserDao {
     private static final String CREATE_USER_QUERY =
             "INSERT INTO user(first_name, last_name, email, password, role, cash)" +
                     " VALUES (?, ?, ?, ?, ?, ?)";
@@ -57,28 +56,17 @@ public class DBoperations {
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()) {
                 //избавиться от if
-                if (resultSet.getString("role").equals("admin")) {
-                    UserEntity user = new AdminEntity(
+               // if (resultSet.getString("role").equals("admin")) {
+                    UserEntity user = new UserEntity(
+                            resultSet.getInt("id"),
                             resultSet.getString("email"),
                             resultSet.getString("password"),
                             resultSet.getString("first_name"),
                             resultSet.getString("last_name"),
                             resultSet.getDouble("cash"));
-                    user.setId(resultSet.getInt("id"));
                     preparedStatement.close();
                     return user;
-                } else
-                    if (resultSet.getString("role").equals("user")) {
-                        UserEntity user = new TenantEntity(
-                                resultSet.getString("email"),
-                                resultSet.getString("password"),
-                                resultSet.getString("first_name"),
-                                resultSet.getString("last_name"),
-                                resultSet.getDouble("cash"));
-                        user.setId(resultSet.getInt("id"));
-                        preparedStatement.close();
-                        return user;
-                    }
+              //  }
            }
             preparedStatement.close();
         }  catch (SQLException ex) {
@@ -96,25 +84,14 @@ public class DBoperations {
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()) {
                 UserEntity user = null;
-                if (resultSet.getString("role") == "admin") {
-                    user = new AdminEntity(
+                     user = new UserEntity(
+                            resultSet.getInt("id"),
                             resultSet.getString("email"),
                             resultSet.getString("password"),
                             resultSet.getString("first_name"),
                             resultSet.getString("last_name"),
                             resultSet.getDouble("cash"));
-                } else
-                if (resultSet.getString("role") == "user") {
-                    user = new TenantEntity(//заменить на set, чтобы
-                            //не дублировать код
-                            resultSet.getString("email"),
-                            resultSet.getString("password"),
-                            resultSet.getString("first_name"),
-                            resultSet.getString("last_name"),
-                            resultSet.getDouble("cash"));
-                } else {
-                    return null;
-                }
+                    preparedStatement.close();
                 users.add(user);
             }
         }  catch (SQLException ex) {

@@ -9,16 +9,26 @@ public class ParkingEntity {
     double id;
     Coordinates coordinates;
     double parkingRadius;
-    transportTypes transportTypes;
-    List<? extends Transport> transports;
+    TransportTypes transportTypes;
+    List<? extends VehicleEntity> transports;
     String address;
 
+    public ParkingEntity(double id, Coordinates coordinates,
+                         double parkingRadius,
+                         TransportTypes transportTypes, String address) {
+        this.id = id;
+        this.coordinates = coordinates;
+        this.parkingRadius = parkingRadius;
+        this.transportTypes = transportTypes;
+        this.address = address;
+    }
 
-    public List<? extends Transport> getTransports() {
+    public List<? extends VehicleEntity> getTransports() {
         return transports;
     }
 
-    public void setTransports(List<? extends Transport> transports) {
+    public void setTransports(List<? extends VehicleEntity> transports)
+    {
         this.transports = transports;
     }
 
@@ -46,7 +56,7 @@ public class ParkingEntity {
         this.parkingRadius = parkingRadius;
     }
 
-    public model.entity.transportTypes getTransportTypes() {
+    public TransportTypes getTransportTypes() {
         return transportTypes;
     }
 
@@ -58,7 +68,7 @@ public class ParkingEntity {
         this.address = address;
     }
 
-    public void setTransportTypes(model.entity.transportTypes transportTypes) {
+    public void setTransportTypes(TransportTypes transportTypes) {
         this.transportTypes = transportTypes;
     }
 }

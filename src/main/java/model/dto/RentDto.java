@@ -1,11 +1,12 @@
-package model.entity;
+package model.dto;
+
+import model.entity.ParkingEntity;
+import model.entity.VehicleEntity;
 
 import java.sql.Time;
-import java.time.LocalDateTime;
 
-public class RentEntity {
-    int id;
-    int userId;
+public class RentDto {
+    UserDto user;
     Time startRent;
     Time endRent;
     ParkingEntity startPoint;
@@ -13,31 +14,21 @@ public class RentEntity {
     boolean rentStatus;
     Class <? extends VehicleEntity> transport;
 
-    public RentEntity(int id, int userId, Time startRent,
-                      ParkingEntity startPoint,
-                      Class<? extends VehicleEntity> transport) {
-        this.id = id;
-        this.userId = userId;
+    public RentDto(UserDto user, Time startRent, ParkingEntity startPoint,
+                   Class<? extends VehicleEntity> transport) {
+        this.user = user;
         this.startRent = startRent;
         this.startPoint = startPoint;
         this.rentStatus = true;
         this.transport = transport;
     }
 
-    public int getId() {
-        return id;
+    public UserDto getUser() {
+        return user;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUser(UserDto user) {
+        this.user = user;
     }
 
     public Time getStartRent() {

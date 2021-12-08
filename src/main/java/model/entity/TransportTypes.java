@@ -1,6 +1,6 @@
 package model.entity;
 
-public enum transportTypes {
+public enum TransportTypes {
     BICYCLES, SCOOTER, ALL
     //возможно стоит убрать чтобы заменить на связь с бд
 }
