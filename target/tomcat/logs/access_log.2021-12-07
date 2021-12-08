@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:25:33 +0300] "GET /RentalCityTransport HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:25:34 +0300] "GET /RentalCityTransport/ HTTP/1.1" 200 452 http-bio-8080-exec-3 706
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:25:39 +0300] "GET /RentalCityTransport/withFilter/ForTestServlet.jsp HTTP/1.1" 200 - http-bio-8080-exec-4 2
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:28:48 +0300] "GET /RentalCityTransport HTTP/1.1" 302 - http-bio-8080-exec-7 0
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:28:48 +0300] "GET /RentalCityTransport/ HTTP/1.1" 200 452 http-bio-8080-exec-8 1
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:28:51 +0300] "POST /RentalCityTransport/login HTTP/1.1" 200 452 http-bio-8080-exec-9 188
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:28:56 +0300] "GET /RentalCityTransport/withFilter/ForTestServlet.jsp HTTP/1.1" 200 - http-bio-8080-exec-10 1
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:29:07 +0300] "POST /RentalCityTransport/login HTTP/1.1" 200 556 http-bio-8080-exec-10 216
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:29:09 +0300] "POST /RentalCityTransport/testServlet HTTP/1.1" 302 - http-bio-8080-exec-10 1
+0:0:0:0:0:0:0:1 - - [07/Dec/2021:21:29:09 +0300] "GET /RentalCityTransport/withFilter/ForTestServlet.jsp HTTP/1.1" 200 137 http-bio-8080-exec-10 65

@@ -11,16 +11,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Вход в систему</title>
+    <title>sign in</title>
 </head>
 <body>
 <form action = "login" method = "post">
     <p>
         <strong>Логин(email):</strong>
         <input type = "email" name = "login"> <br>
-        <strong>Пароль:</strong>
+        <strong>Password:</strong>
         <input type = "password" name = "password"> <br>
-        <input type = "submit" name = "loginButton" value = "Войти в систему"> <br>
+        <input type = "submit" name = "loginButton" value = "sign in"> <br>
     </p>
 </form>
 </body>
