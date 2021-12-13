@@ -1,6 +1,7 @@
 com\accenture\davydenko\service\VehicleService.class
 com\accenture\davydenko\model\dto\VehicleDto.class
 com\accenture\davydenko\model\entity\VehicleEntity.class
+com\accenture\davydenko\access\DBconnectionManager.class
 com\accenture\davydenko\model\entity\UserEntity.class
 com\accenture\davydenko\model\entity\TransportTypes.class
 com\accenture\davydenko\model\entity\Access.class
@@ -9,13 +10,15 @@ com\accenture\davydenko\model\entity\Condition.class
 com\accenture\davydenko\model\entity\ParkingEntity.class
 com\accenture\davydenko\model\dto\UserDto.class
 com\accenture\davydenko\servlets\LoginServlet.class
+com\accenture\davydenko\access\MyDataSource.class
 com\accenture\davydenko\model\entity\RentEntity.class
+com\accenture\davydenko\service\ServiceConfig.class
 com\accenture\davydenko\filters\FilterLogin.class
 com\accenture\davydenko\model\dto\RentDto.class
 com\accenture\davydenko\access\UserDao.class
 com\accenture\davydenko\service\UserService.class
 com\accenture\davydenko\model\dto\ParkingDto.class
-com\accenture\davydenko\access\DBconnection\DBconnection.class
+com\accenture\davydenko\access\DaoConfig.class
 com\accenture\davydenko\model\utils\Coordinates.class
 com\accenture\davydenko\service\RentService.class
 com\accenture\davydenko\servlets\withFilter\TestServlet.class

@@ -1,6 +1,8 @@
 package com.accenture.davydenko.model.entity;
 
 import com.accenture.davydenko.model.utils.Coordinates;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class ParkingEntity {
     TransportTypes transportTypes;
     List<? extends VehicleEntity> transports;
     String address;
+
 
     public ParkingEntity(double id, Coordinates coordinates,
                          double parkingRadius,

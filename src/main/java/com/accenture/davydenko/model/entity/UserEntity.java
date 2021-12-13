@@ -1,4 +1,5 @@
 package com.accenture.davydenko.model.entity;
+
 public class UserEntity {
 
     private int id;

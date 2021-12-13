@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [13/Dec/2021:18:47:06 +0300] "GET /RentalCityTransport HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [13/Dec/2021:18:47:07 +0300] "GET /RentalCityTransport/ HTTP/1.1" 200 452 http-bio-8080-exec-3 672
+0:0:0:0:0:0:0:1 - - [13/Dec/2021:18:47:12 +0300] "POST /RentalCityTransport/login HTTP/1.1" 200 579 http-bio-8080-exec-4 1150
