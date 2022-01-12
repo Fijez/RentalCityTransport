@@ -14,9 +14,9 @@ import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@Configuration
-@PropertySource("classpath:/application.properties")
-@ComponentScan
+//@Configuration
+//@PropertySource("classpath:/application.properties")
+//@ComponentScan
 public class DBconnectionManager {
 //    @Value("${db.url}")
 //    private String jdbcUrl;
@@ -27,7 +27,7 @@ public class DBconnectionManager {
 //   @Value("$db.driverClassName")
 //   private String registerDriver;
 
-   @Autowired
+//   @Autowired
     private Environment env;
     private static final String USER =  "fijez";
     private static final String PASSWORD = "forAccenture";
@@ -37,7 +37,7 @@ public class DBconnectionManager {
 
     private MyDataSource dataSource;
 
-    @Bean
+//    @Bean
     public MyDataSource dataSource(MyDataSource dataSource) {
         if (dataSource!=null) {
             dataSource.setUrl(env.getProperty("db.url"));

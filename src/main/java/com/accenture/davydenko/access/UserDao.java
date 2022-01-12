@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.sql.DataSource;
 import java.sql.*;
 
-@Component
+//@Component
 public class UserDao {
     private static final String CREATE_USER_QUERY =
             "INSERT INTO user(first_name, last_name, email, password, role, cash)" +
@@ -25,7 +25,7 @@ public class UserDao {
 
     private MyDataSource dataSource;
 
-    @Autowired
+   // @Autowired
     public UserDao(MyDataSource dataSource) {
         this.dataSource = dataSource;
     }

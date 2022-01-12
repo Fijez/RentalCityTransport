@@ -1,7 +1,5 @@
 package com.accenture.davydenko.service;
 
-import com.accenture.davydenko.service.ParkingService;
-import com.accenture.davydenko.service.RentService;
 import com.accenture.davydenko.service.UserService;
 import com.accenture.davydenko.service.VehicleService;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = "com.accenture.davydenko.service")
 public class ServiceConfig {
     @Bean
     ParkingService parkingService() {

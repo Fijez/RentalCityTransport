@@ -2,6 +2,7 @@ package com.accenture.davydenko.service;
 
 import java.util.List;
 
+@Component
 public class ParkingService {
     public List<VehicleService> getListOfVehicles(ParkingService parking) {
         return null;

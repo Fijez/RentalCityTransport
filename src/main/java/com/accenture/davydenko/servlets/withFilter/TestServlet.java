@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Controller
 @WebServlet(name = "testServlet", urlPatterns = {"/testServlet"})
 public class TestServlet extends HttpServlet {
     @Override

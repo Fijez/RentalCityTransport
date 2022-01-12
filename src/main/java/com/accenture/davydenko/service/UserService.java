@@ -4,6 +4,7 @@ import com.accenture.davydenko.model.entity.ParkingEntity;
 import com.accenture.davydenko.model.entity.UserEntity;
 import com.accenture.davydenko.model.entity.VehicleEntity;
 
+@Component
 public class UserService {
     public Class<? extends VehicleEntity> findUnoccupiedTransport
             (UserEntity user, ParkingEntity parking)

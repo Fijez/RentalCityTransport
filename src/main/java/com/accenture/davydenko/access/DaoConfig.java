@@ -7,15 +7,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 
-@Configuration
-@PropertySource("classpath:/application.properties")
-@ComponentScan
+//@Configuration
+//@PropertySource("classpath:/application.properties")
+//@ComponentScan
 public class DaoConfig {
 
-    @Autowired
+    //@Autowired
     private Environment env;
 
-    @Bean
+    //@Bean
     public MyDataSource dataSource() {
         MyDataSource dataSource = new MyDataSource();
             dataSource.setUrl(env.getProperty("db.url"));
@@ -24,7 +24,7 @@ public class DaoConfig {
             return dataSource;
     }
 
-    @Bean
+    //@Bean
    public UserDao userDao() {
         return new UserDao(dataSource());
    }

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
-@Controller
+
 @WebServlet(name = "loginServlet", urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
 
