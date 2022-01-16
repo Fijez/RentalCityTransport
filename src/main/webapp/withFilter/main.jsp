@@ -7,7 +7,7 @@
 --%>
 <%@ page language="java" contentType="text/html;charset=UTF-8"%>
 <%@ page pageEncoding="UTF-8"%>
-<%@ page import="model.entity.UserEntity" %>
+<%@ page import="com.davydenko.model.entity.UserEntity" %>
 <% request.setCharacterEncoding("UTF-8");%>
 <html>
 <head>
