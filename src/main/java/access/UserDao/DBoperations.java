@@ -18,7 +18,7 @@ public class DBoperations {
             "SELECT * FROM user WHERE email = ?";
 
     private static final String FIND_ALL_QUERY =
-            "SELECT * FROM users";
+            "SELECT * FROM user";
 
     public UserEntity createUser(UserEntity user) {
         try (Connection connection = DBconnection.connectionToDB()) {
@@ -88,7 +88,12 @@ public class DBoperations {
     }
 
     public static List<UserEntity> getAllUsers() {
-        List<UserEntity> users = new ArrayList<>();
+        List<UserEntity> users = new ArrayList<>() {
+            @Override
+            public String toString() {
+                return super.toString().replaceAll("}, ", "},\n");
+            }
+        };
         try(Connection connection = DBconnection.connectionToDB()) {
             PreparedStatement preparedStatement =
                     connection.prepareStatement(FIND_ALL_QUERY);
@@ -96,7 +101,7 @@ public class DBoperations {
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()) {
                 UserEntity user = null;
-                if (resultSet.getString("role") == "admin") {
+                if (resultSet.getString("role").equals("admin")) {
                     user = new AdminEntity(
                             resultSet.getString("email"),
                             resultSet.getString("password"),
@@ -104,7 +109,7 @@ public class DBoperations {
                             resultSet.getString("last_name"),
                             resultSet.getDouble("cash"));
                 } else
-                if (resultSet.getString("role") == "user") {
+                if (resultSet.getString("role").equals("user")) {
                     user = new TenantEntity(//заменить на set, чтобы
                             //не дублировать код
                             resultSet.getString("email"),

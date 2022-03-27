@@ -43,6 +43,11 @@
              <artifactId>javax.servlet-api</artifactId>
              <version>4.0.1</version>
          </dependency>
+         <dependency>
+             <groupId>javax</groupId>
+             <artifactId>javaee-api</artifactId>
+             <version>8.0.1</version>
+         </dependency>
      </dependencies>
 
      <build>

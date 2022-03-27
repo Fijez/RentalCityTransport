@@ -1,6 +1,7 @@
 package servlets;
 
 import access.UserDao.DBoperations;
+import model.entity.Access;
 import model.entity.UserEntity;
 
 import javax.servlet.ServletContext;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 @WebServlet(name = "loginServlet", urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
@@ -32,21 +35,28 @@ public class LoginServlet extends HttpServlet {
         try {
             UserEntity user = DBoperations.selectUser(login);
             HttpSession session = req.getSession(true);
-            session.setAttribute("user",user);
+            session.setAttribute("user", user);
             if (user != null && user.getPassword().equals(password)) {
                 System.out.println("LoginServlet if");
                 //req.setAttribute("login", user);
-                servletContext.getRequestDispatcher("/withFilter/main.jsp")
-                        .forward(req, resp);
-            }
-            else {
+                if (user.getAccess() == Access.FULL) {
+                    List<UserEntity> userEntityList = DBoperations.getAllUsers();
+                    //System.out.println(userEntityList);
+                    session.setAttribute("getAll", userEntityList);
+                    servletContext.getRequestDispatcher("/withFilter/admin.jsp")
+                            .forward(req, resp);
+                } else {
+                    servletContext.getRequestDispatcher("/withFilter/main.jsp")
+                            .forward(req, resp);
+                }
+            } else {
                 System.out.println("in else");
                 //resp.sendRedirect("login.jsp");
                 session.removeAttribute("user");
                 servletContext.getRequestDispatcher("/login.jsp")
                         .forward(req, resp);
-                }
-            } catch (SQLException e) {
+            }
+        } catch (SQLException e) {
             System.out.println("catch in login servlet");
             resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             req.setAttribute("error", "error in login.jsp");
